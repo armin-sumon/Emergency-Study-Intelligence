@@ -7,6 +7,19 @@ import pandas as pd
 DATA_PATH = "data/raw/study_records.csv"
 
 
+# Part 30A — Study mode
+def get_study_mode(days_remaining):
+
+    if days_remaining > 7:
+        return "NORMAL"
+
+    elif days_remaining > 3:
+        return "EMERGENCY"
+
+    else:
+        return "LAST MINUTE"
+
+
 # Part 21 — Validate knowledge input
 def get_knowledge(topic):
 
@@ -121,8 +134,18 @@ def main():
         days_remaining
     )
 
+    # Part 30A — Study mode
+    study_mode = get_study_mode(
+        days_remaining
+    )
+
+    print()
     print(
         f"Exam urgency: {urgency}"
+    )
+
+    print(
+        f"Study mode: {study_mode}"
     )
 
     print()
@@ -137,7 +160,10 @@ def main():
     student_knowledge = {}
 
     for topic in topic_df["topic"]:
-        student_knowledge[topic] = get_knowledge(topic)
+
+        student_knowledge[topic] = get_knowledge(
+            topic
+        )
 
     # Generate recommendations
     # Part 25 — days_remaining is NOT used in ML yet
@@ -148,6 +174,38 @@ def main():
         available_minutes
     )
 
+    # Part 30A — Recommendation explanation
+    if study_mode == "NORMAL":
+
+        print(
+            "Focus on balanced preparation "
+            "across important topics."
+        )
+
+    elif study_mode == "EMERGENCY":
+
+        print(
+            "Focus on high-priority topics "
+            "with the best exam value."
+        )
+
+    else:
+
+        print(
+            "Focus only on the most valuable topics "
+            "because exam time is very limited."
+        )
+
+    print()
+
+    # Part 30C — Confidence warning
+    print()
+    print("Note:")
+    print(
+        "This recommendation is based on a prototype ML model "
+        "and should be treated as a study-planning aid, "
+        "not a guarantee of exam performance."
+    )
     print()
     print("=" * 50)
     print("          YOUR STUDY PLAN")
@@ -159,6 +217,7 @@ def main():
     )
 
     if plan.empty:
+
         print("No suitable topics found.")
         return
 
@@ -200,6 +259,19 @@ def main():
             f"   Your knowledge: "
             f"{row['knowledge_before']:.0f}"
         )
+
+        # Part 30B — Skip topics with strong knowledge
+        if row["knowledge_before"] >= 90:
+
+            print(
+                "   Note: You already have strong "
+                "knowledge of this topic."
+            )
+
+            print(
+                "   Consider revising it briefly instead "
+                "of spending a full study session."
+            )
 
         print()
 
