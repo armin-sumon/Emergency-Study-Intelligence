@@ -1,0 +1,10 @@
+topic,exam_importance,difficulty,student_knowledge,estimated_minutes
+HTTP,9,6,8,60
+TCP Congestion Control,10,8,7,75
+UDP,5,3,8,25
+DNS,6,4,5,35
+Routing,8,7,6,60
+Application Layer Protocols,7,5,4,45
+Client Server Architecture,4,3,8,20
+P2P Architecture,4,4,6,30
+DHCP,7,5,3,30

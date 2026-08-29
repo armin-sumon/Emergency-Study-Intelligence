@@ -1,0 +1,26 @@
+student_id,topic,exam_frequency,question_marks,difficulty,knowledge_before,study_minutes,quiz_before,quiz_after,exam_score
+S001,TCP Congestion Control,9,10,8,25,90,30,82,86
+S001,HTTP,8,8,6,40,60,45,88,91
+S001,DNS,5,5,4,65,35,68,91,89
+S001,Routing,8,8,7,30,60,35,78,84
+S001,UDP,3,5,3,80,25,82,94,92
+S002,TCP Congestion Control,9,10,8,40,75,45,85,88
+S002,HTTP,8,8,6,20,70,25,78,84
+S002,DNS,5,5,4,70,30,75,93,91
+S002,Routing,8,8,7,35,60,40,80,86
+S002,UDP,3,5,3,60,30,65,90,88
+S003,TCP Congestion Control,9,10,8,15,100,20,80,83
+S003,HTTP,8,8,6,55,40,60,90,92
+S003,DNS,5,5,4,80,20,82,96,94
+S003,Routing,8,8,7,25,75,30,79,85
+S003,UDP,3,5,3,90,15,90,98,96
+S004,TCP Congestion Control,9,10,8,35,80,40,84,87
+S004,HTTP,8,8,6,30,65,35,82,87
+S004,DNS,5,5,4,60,40,65,90,89
+S004,Routing,8,8,7,45,50,50,85,88
+S004,UDP,3,5,3,85,20,88,97,95
+S005,TCP Congestion Control,9,10,8,20,95,25,81,85
+S005,HTTP,8,8,6,45,55,50,89,91
+S005,DNS,5,5,4,55,40,60,88,87
+S005,Routing,8,8,7,20,80,25,77,82
+S005,UDP,3,5,3,75,25,78,94,93
