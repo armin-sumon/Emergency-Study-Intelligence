@@ -1,0 +1,13 @@
+topic,difficulty
+Routing,Difficult
+TCP Congestion Control,Difficult
+Routing,Normal
+UDP,Difficult
+UDP,Normal
+DNS,Difficult
+HTTP,Difficult
+DNS,Normal
+HTTP,Normal
+TCP Congestion Control,Difficult
+Routing,Difficult
+Routing,Easy
