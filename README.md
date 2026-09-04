@@ -1,3 +1,9 @@
+# 📚 Emergency Study Planner
+
+🚀 **[Launch Live App](https://emergency-study-intelligence-5naaaf4wvdbw7i7mwoz6wn.streamlit.app/)**
+
+An intelligent study-planning prototype that helps students decide what to study when exam time is limited.
+
 # Emergency Study Planner
 
 An intelligent study-planning prototype that helps students decide **what to study when exam time is limited**.
